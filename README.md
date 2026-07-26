@@ -66,19 +66,6 @@ All options:
 --no-save       Skip saving the output video
 ```
 
-### Generating a GIF preview
-
-To turn any video (e.g. the annotated output above) into a size-optimized
-GIF for a README or demo:
-
-```bash
-python video_to_gif.py --input result-test-video.mp4 --output preview.gif --seconds 15 --fps 8 --width 350
-```
-
-This uses ffmpeg's two-pass palette generation, which produces noticeably
-smaller files than a naive single-pass GIF conversion at the same visual
-quality.
-
 ## Running tests
 
 ```bash
@@ -103,7 +90,7 @@ injected moving block), so they run without needing the sample video.
 ## Origin
 
 This project started as a Colab notebook exercise
-(`notebooks/original_colab.ipynb`) and was refactored into a standalone,
+(`motion-detection.ipynb`) and was refactored into a standalone,
 tested CLI tool for this repository.
 
 ## License
