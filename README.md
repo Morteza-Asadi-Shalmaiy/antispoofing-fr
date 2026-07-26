@@ -27,24 +27,6 @@ subtraction approach, similar to what's used in basic security-camera
 5. The annotated frame is written to an output video, and progress is
    printed as a single live-updating line.
 
-## Project structure
-
-```
-motion-detection/
-├── motion_detector.py          # Main CLI script
-├── video_to_gif.py             # Converts a video into an optimized GIF preview
-├── notebooks/
-│   ├── original_colab.ipynb    # Original Colab prototype (as first written)
-│   └── motion_detection_fixed.ipynb  # Same logic, with fixes applied in Colab
-├── assets/
-│   ├── test-video.mp4          # Sample input video
-│   └── result-test-video.gif   # Sample output preview (used above)
-├── tests/
-│   └── test_motion_detector.py # Pytest tests using synthetic frames
-├── requirements.txt
-└── LICENSE
-```
-
 ## Installation
 
 ```bash
