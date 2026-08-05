@@ -1,10 +1,19 @@
-# Motion Detection with OpenCV
+# Motion-Detection 🎥
+![Python](https://img.shields.io/badge/Python-3.8+-blue?logo=python&logoColor=white)
+![OpenCV](https://img.shields.io/badge/OpenCV-Background%20Subtraction-5C3EE8?logo=opencv&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+![Tests](https://img.shields.io/badge/Tests-pytest-0A9EDC?logo=pytest&logoColor=white)
 
-A lightweight motion detector built with OpenCV. It compares each video frame
-against a running background model and draws bounding boxes around any
-regions where meaningful motion is detected — a classic background
-subtraction approach, similar to what's used in basic security-camera
-"occupied / unoccupied" systems.
+> **Results at a glance:** Running-weighted-average background model (robust to gradual
+> lighting drift) · CLI with configurable sensitivity, resize, and webcam support ·
+> Unit-tested on synthetic frames, no sample video required
+
+A lightweight **motion detector** built with OpenCV, using classic background
+subtraction rather than a single frozen reference frame: each frame is blurred,
+diffed against a continuously updated background average (`cv2.accumulateWeighted`),
+thresholded into a motion mask, and boxed via contour detection. Started as a Colab
+notebook exercise and refactored into a tested, configurable CLI tool that runs on
+video files or a live webcam feed.
 
 ## Preview
 
